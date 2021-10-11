@@ -16,3 +16,5 @@ use App\Http\Controllers\PagesController;
 
 Route::get('/', function () { return view('layouts.master'); })->name('home');
 Route::get('/services', [PagesController::class, 'services'])->name('services');
+Route::get('/contact-us', [PagesController::class, 'contact'])->name('contact');
+Route::get('/events', [PagesController::class, 'events'])->name('events');
