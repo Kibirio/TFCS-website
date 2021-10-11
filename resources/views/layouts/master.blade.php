@@ -9,7 +9,7 @@
 <meta name="description" content="Agrotek – Agriculture HTML Template" />
 <meta name="author" content="https://www.themetechmount.com/" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title>TFCS - HOME</title>
+<title>TFCS - {{ Request::route()->getName() }}</title>
 
 <!-- favicon icon -->
 <link rel="shortcut icon" href="{{ asset('images/favicon.png')}}" />
