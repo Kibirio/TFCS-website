@@ -65,7 +65,7 @@
         <!-- preloader end -->
 
         <!--header start-->
-        <header id="masthead" class="header ttm-header-style-04">
+        <header id="masthead" class="header ttm-header-style-04 mb-20">
             <!-- ttm-header-wrap -->
             <div class="ttm-header-wrap">
                 <!-- ttm-stickable-header-w -->
@@ -230,140 +230,6 @@
                 </div><!-- ttm-stickable-header-w end-->
             </div><!--ttm-header-wrap end -->
         </header><!--header end-->
-
-        <!-- START homeclassicmain REVOLUTION SLIDER 6.0.1 -->
-        <rs-module-wrap id="rev_slider_3_1_wrapper" data-source="gallery">
-                <rs-module id="rev_slider_3_1" data-version="6.1.2" class="rev_slider_3_1_height">
-                    <rs-slides>
-                        <rs-slide data-key="rs-7" data-title="Slide" data-thumb="images/slides/slider-mainbg-005.jpg" data-anim="ei:d;eo:d;s:d;r:0;t:zoomout;sl:d;">
-                            
-                            <img src="{{ asset('images/slides/slider-mainbg-005.jpg') }}" title="sliderbg-005.jpg" width="1920" height="910" class="rev-slidebg" data-no-retina>
-                            <rs-layer
-                                id="slider-4-slide-1-layer-1"
-                                class="head-font" 
-                                data-type="text"
-                                data-rsp_ch="on"
-                                data-xy="x:c;yo:482px,482px,199px,133px;"
-                                data-text="w:normal;s:70,70,55,35;l:85,85,60,45;fw:700;"
-                                data-frame_0="y:100%;"
-                                data-frame_1="e:Linear.easeNone;st:330;sp:900;sR:330;"
-                                data-frame_999="o:0;st:w;sR:7770;"
-                                > ON YOUR FARM 
-                            </rs-layer>
-                            <rs-layer
-                                id="slider-4-slide-1-layer-2"
-                                class="head-font"
-                                data-type="text"
-                                data-rsp_ch="on"
-                                data-xy="x:c;xo:0,0,0,455px;yo:368px,368px,108px,129px;"
-                                data-text="w:normal;s:21,21,18,15;l:25,25,20,15;"
-                                data-vbility="t,t,t,f"
-                                data-frame_0="y:100%;"
-                                data-frame_1="e:Linear.easeNone;st:40;sp:600;sR:40;"
-                                data-frame_999="o:0;st:w;sR:8360;"
-                                >Do You Want to Make A Difference?  
-                            </rs-layer>
-                            <rs-layer
-                                id="slider-4-slide-1-layer-3"
-                                class="head-font" 
-                                data-type="text"
-                                data-rsp_ch="on"
-                                data-xy="x:c;yo:403px,403px,135px,92px;"
-                                data-text="w:normal;s:70,70,55,35;l:85,85,60,45;fw:700;"
-                                data-frame_0="y:100%;"
-                                data-frame_1="e:Linear.easeNone;st:230;sp:900;sR:230;"
-                                data-frame_999="o:0;st:w;sR:7870;"
-                                >QUALITY FEEDS MADE 
-                            </rs-layer>
-                            <a
-                                id="slider-4-slide-1-layer-4" 
-                                class="rs-layer ttm_prettyphoto ttm-bgcolor-skincolor"
-                                href="https://youtu.be/7e90gBu4pas" target="_self"
-                                data-type="text"
-                                data-rsp_ch="on"
-                                data-xy="x:c;yo:589px,589px,276px,192px;"
-                                data-text="w:normal;s:20,20,20,15;l:52,52,41,41;a:center;"
-                                data-dim="w:50px,50px,40px,40px;h:50px,50px,40px,40px;"
-                                data-border="bor:50%,50%,50%,50%;"
-                                data-frame_0="y:100%;"
-                                data-frame_1="e:Linear.easeNone;st:720;sp:500;sR:720;"
-                                data-frame_999="o:0;st:w;sR:7780;"
-                                data-frame_hover="bgc:#232323;boc:rgba(132,193,58,0);bor:50%,50%,50%,50%;"
-                                ><i class="fa fa-play"></i> 
-                            </a>
-                            <a
-                                id="slider-4-slide-1-layer-5" 
-                                class="rs-layer head-font"
-                                href="#" target="_self" rel="nofollow"
-                                data-type="text"
-                                data-rsp_ch="on"
-                                data-xy="x:c;yo:645px,645px,326px,241px;"
-                                data-text="w:normal;s:15,15,12,12;l:20,20,14,12;fw:600;"
-                                data-frame_0="y:100%;"
-                                data-frame_1="e:Linear.easeNone;st:720;sp:500;sR:720;"
-                                data-frame_999="o:0;st:w;sR:7780;"
-                                >VIEW MORE 
-                            </a>
-                        </rs-slide>
-                        <rs-slide data-key="rs-8" data-title="Slide" data-thumb="images/slides/slider-mainbg-006.jpg" data-anim="ei:d;eo:d;s:d;r:0;t:zoomout;sl:d;">
-                            
-                            <img src="{{ asset('images/slides/slider-mainbg-006.jpg') }}" title="sliderbg-006.jpg" width="1920" height="910" class="rev-slidebg" data-no-retina>
-                            <rs-layer
-                                id="slider-4-slide-2-layer-1"
-                                class="head-font" 
-                                data-type="text"
-                                data-rsp_ch="on"
-                                data-xy="x:c;yo:486px,486px,214px,139px;"
-                                data-text="w:normal;s:70,70,55,35;l:85,85,60,45;fw:600;"
-                                data-frame_0="y:100%;"
-                                data-frame_1="e:Linear.easeNone;st:330;sp:900;sR:330;"
-                                data-frame_999="o:0;st:w;sR:7770;"
-                                >SECTOR CAREER 
-                            </rs-layer>
-                            <rs-layer
-                                id="slider-4-slide-2-layer-2" 
-                                data-type="text"
-                                data-rsp_ch="on"
-                                data-xy="x:c;xo:0,0,0,455px;yo:379px,379px,126px,129px;"
-                                data-text="w:normal;s:20,20,16,15;l:25,25,20,15;fw:500;"
-                                data-vbility="t,t,t,f"
-                                data-frame_0="y:100%;"
-                                data-frame_1="e:Linear.easeNone;st:40;sp:600;sR:40;"
-                                data-frame_999="o:0;st:w;sR:8360;"
-                                >Do You Want to Make A Difference?  
-                            </rs-layer>
-                            <rs-layer
-                                id="slider-4-slide-3-layer-3"
-                                class="head-font" 
-                                data-type="text"
-                                data-rsp_ch="on"
-                                data-xy="x:c;yo:412px,412px,150px,100px;"
-                                data-text="w:normal;s:70,70,55,35;l:85,85,60,45;fw:600;"
-                                data-frame_0="y:100%;"
-                                data-frame_1="e:Linear.easeNone;st:230;sp:900;sR:230;"
-                                data-frame_999="o:0;st:w;sR:7870;"
-                                >DISCOVER YOUR DAIRY 
-                            </rs-layer>
-                            <a
-                                id="slider-4-slide-3-layer-4" 
-                                class="rs-layer ttm-btn-bgcolor-skincolor ttm-btn ttm-btn-size-md"
-                                href="#" target="_self" rel="nofollow"
-                                data-type="text"
-                                data-rsp_ch="on"
-                                data-xy="x:c;yo:600px,600px,294px,204px;"
-                                data-text="w:normal;s:15,15,12,12;l:20,20,14,12;fw:600;"
-                                data-padding="t:14,14,9,10;r:30,30,19,15;b:14,14,9,10;l:30,30,19,15;"
-                                data-frame_0="y:100%;"
-                                data-frame_1="e:Linear.easeNone;st:720;sp:500;sR:720;"
-                                data-frame_999="o:0;st:w;sR:7780;"
-                                data-frame_hover="bgc:#232323;boc:#232323;bos:solid;bow:1px,1px,1px,1px;sp:300ms;"
-                                >MORE ABOUT US 
-                            </a>
-                        </rs-slide>
-                    </rs-slides>
-                </rs-module>
-        </rs-module-wrap>
-        <!-- END REVOLUTION SLIDER -->
        
 
         <!--site-main start-->
