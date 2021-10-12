@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 
@@ -14,7 +17,15 @@ use App\Http\Controllers\PagesController;
 |
 */
 
+
 Route::get('/', function () { return view('layouts.master'); })->name('home');
 Route::get('/services', [PagesController::class, 'services'])->name('services');
 Route::get('/contact-us', [PagesController::class, 'contact'])->name('contact');
 Route::get('/events', [PagesController::class, 'events'])->name('events');
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/about-us', [AboutController::class, 'index'])->name('about-us');
+
+Route::post('/contact-us', [ContactController::class, 'store'])->name('contact');
+
