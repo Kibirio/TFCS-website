@@ -7,7 +7,7 @@
 <meta name="description" content="Tulaga Farmers Cooperatives" />
 <meta name="author" content="https://www.themetechmount.com/" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title>TFCS - HOME</title>
+<title>TFCS - {{ Request::route()->getName() }}</title>
 
 <!-- favicon icon -->
 <link rel="shortcut icon" href="{{ asset('images/favicon.png')}}" />
@@ -64,7 +64,10 @@
         <!-- preloader end -->
 
         <!--header start-->
+
+
         <header id="masthead" class="header ttm-header-style-01">
+
             <!-- ttm-header-wrap -->
             <div class="ttm-header-wrap">
                 <!-- ttm-stickable-header-w -->
@@ -177,6 +180,7 @@
                 </div><!-- ttm-stickable-header-w end-->
             </div><!--ttm-header-wrap end -->
         </header><!--header end-->
+
 
         <!--site-main start-->
         @yield('content')
@@ -322,6 +326,24 @@
         <script src="{{ asset('revolution/js/slider.js') }}"></script>
 
         <!-- Javascript end-->
+
+
+        <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+        <script>
+
+            function initialize() {
+                var latlng = new google.maps.LatLng(-34.397, 150.644);
+                var myOptions = {
+                    zoom: 8,
+                    center: latlng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var map = new google.maps.Map(document.getElementById("map_canvas"),
+                        myOptions);
+            }
+            google.maps.event.addDomListener(window, "load", initialize);
+
+        </script>
 
 </body>
 
