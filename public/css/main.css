@@ -73,7 +73,7 @@ a:focus {
     text-decoration: none; 
 }
 a:focus, a:hover { 
-    color: #d57315; 
+    color: #52DCEA; 
     text-decoration: none; 
 }
 a, button, input { 
@@ -98,17 +98,17 @@ p {
 }
 
 *::-moz-selection { 
-    background: #d57315; 
+    background: #52DCEA; 
     color: #fff; 
     text-shadow: none; 
 }
 ::-moz-selection { 
-    background: #d57315; 
+    background: #52DCEA; 
     color: #fff;
     text-shadow: none; 
 }
 ::selection { 
-    background: #d57315; 
+    background: #52DCEA; 
     color: #fff; 
     text-shadow: none; 
 }
@@ -655,7 +655,7 @@ body .page.sidebar-true .site-main{
 .accordion.style2 .toggle .toggle-title a.active:after,
 .testimonials-nav .slick-prev:hover:before,
 .testimonials-nav .slick-next:hover:before{
-  color: #d57315;
+  color: #52DCEA;
 }
 
 /** Skin-bg-color **/
@@ -738,7 +738,7 @@ div.product ul.tabs li a:before,
 .ttm-header-style-02 .ttm-header-icons .ttm-header-search-link a:hover,
 .top-contact.ttm-highlight-left:after, 
 .top-contact.ttm-highlight-right:after{
-  background-color: #d57315 ;
+  background-color: #52DCEA ;
 }
 
 /** Skin-border-color **/
@@ -782,7 +782,7 @@ textarea:focus,
 .featured-imagebox-blog.ttm-box-view-left-image .featured-content .category> a,
 .comment-list a.comment-reply-link:hover,
 .testimonil-slide .slick-dots li.slick-active button:before{ 
-    border-color: #d57315;
+    border-color: #52DCEA;
 }
 .ttm-search-overlay,
 .ttm-rounded-shadow-box, div.product ul.tabs li.active a:before,
@@ -792,18 +792,18 @@ textarea:focus,
 #site-header-menu #site-navigation .menu ul ul,
 .blog-icon,
 .featured-content hr {
-    border-top-color: #d57315 !important; 
+    border-top-color: #52DCEA !important; 
 }
 .ttm-search-overlay .w-search-form-row:before,
 .tooltip-bottom:before,
 .featured-icon-box.top-icon.style2,
 .featured-imagebox-team.style2:hover .featured-content,
 .testimonials-info:after,
-.featured-imagebox-blog.top-image { border-bottom-color: #d57315 !important; }
+.featured-imagebox-blog.top-image { border-bottom-color: #52DCEA !important; }
 
 .ttm-blog-single .ttm-blog-single-content blockquote,
 .featured-icon-box.top-icon.style1:hover,
-.featured-icon-box.left-icon.style9{ border-left-color: #d57315 !important; }
+.featured-icon-box.left-icon.style9{ border-left-color: #52DCEA !important; }
 
 
 /** 2.DarkGrey-color **/

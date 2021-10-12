@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('layouts.master');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/about-us', [AboutController::class, 'index'])->name('about-us');
+
+Route::post('/contact-us', [ContactController::class, 'store'])->name('contact');
