@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="keywords" content="Tulaga Farmers Co-operative" />
 <meta name="description" content="Tulaga Farmers Co-operatives" />
-<meta name="author" content="https://www.themetechmount.com/" />
+<meta name="author" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <title>TFCS - HOME</title>
 
@@ -31,6 +31,12 @@
 
 <!-- flaticon -->
 <link rel="stylesheet" type="text/css" href="{{ asset('css/flaticon.css') }}"/>
+
+<!-- toastr -->
+<link rel="stylesheet" type="text/css" href="{{ asset('css/toastr.min.css') }}"/>
+
+<!-- sweetalert2 -->
+<link rel="stylesheet" type="text/css" href="{{ asset('css/sweetalert2.min.css') }}"/>
 
 
 <!-- REVOLUTION LAYERS STYLES -->
@@ -116,7 +122,7 @@
                                         <div class="widget_info d-flex flex-row align-items-center justify-content-end">
                                             <div class="widget_icon"><i class="flaticon-call"></i></div>
                                             <div class="widget_content">
-                                                <h5 class="widget_title">+254 710-646-943</h5>
+                                                <h5 class="widget_title">+254-710-646-943</h5>
                                                 <p class="widget_desc">Make A Call</p>
                                             </div>
                                         </div><!-- widget-info end -->
@@ -166,13 +172,13 @@
                                         <ul class="dropdown">
                                         <li><a href="{{ route('home') }}">Home</a>
                                             </li>
-                                            <li class="active"><a href="{{ route('about-us') }}">About Us</a>
+                                            <li class="active"><a href="{{ route('about') }}">About Us</a>
                                             </li>
-                                            <li><a href="#">Services</a>
+                                            <li><a href="{{ route('services') }}">Services</a>
                                             </li>
-                                            <li><a href="#">Events</a>
+                                            <li><a href="{{ route('events') }}">Events</a>
                                             </li>
-                                            <li><a href="#">Contact Us</a>
+                                            <li><a href="{{ route('contact') }}">Contact Us</a>
                                             </li>
                                         </ul>
                                     </nav>
@@ -1048,16 +1054,10 @@
                                             <span class="text-danger error-text phone_error"></span>
                                         </div>
                                     </div>
-                                    <div class="col-sm-6 col-md-6">
+                                    <div class="col-sm-12 col-md-12">
                                         <div class="form-group">
                                             <input name="email" type="email" placeholder="Email Address*" required="required" class="form-control with-border bg-white">
                                             <span class="text-danger error-text email_error"></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-6">
-                                        <div class="form-group">
-                                            <input name="subject" type="text" placeholder="Subject" required="required" class="form-control with-border bg-white">
-                                            <span class="text-danger error-text subject_error"></span>
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-md-12">
@@ -1233,7 +1233,7 @@
                                     <p>We are a marketing Co-operative Society helping farmers by collecting their milk, processing and marketing on their behalf. Our aim is to improve the livelihood of members through training, offering competitive rates and beneficial linkages.</p>
                                     <p></p>
                                     <hr>
-                                    <a class="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right" href="#">Find Us On Map  <i class="ti ti-arrow-circle-right"></i></a>
+                                    <a class="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right" href="{{ route('contact') }}">Find Us On Map  <i class="ti ti-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -1320,51 +1320,16 @@
         <script src="{{ asset('js/slick.js') }}"></script>
         <script src="{{ asset('js/jquery.prettyPhoto.js') }}"></script>
         <script src="{{ asset('js/numinate.min6959.js?ver=4.9.3') }}"></script>
+        <script src="{{ asset('js/sweetalert2.min.js') }}"></script>
+        <script src="{{ asset('js/toastr.min.js') }}"></script>
         <script src="{{ asset('js/main.js') }}"></script>
+        <script src="{{ asset('js/custom.js') }}"></script>
 
         <!-- Revolution Slider -->
         <script src="{{ asset('revolution/js/revolution.tools.min.js') }}"></script>
         <script src="{{ asset('revolution/js/rs6.min.js') }}"></script>
         <script src="{{ asset('revolution/js/slider.js') }}"></script>
 
-
-        <script>
-            // toastr.options.preventDuplicates = true;
-            $.ajaxSetup({
-                headers: {
-                    "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-
-            $(function() {
-                $('#ttm-quote-form').on('submit', function(e){
-                    e.preventDefault();
-                    var form = this;
-                    $.ajax({
-                        url: $(form).attr('action'),
-                        method: $(form).attr('method'),
-                        data: new FormData(form),
-                        processData: false,
-                        dataType: 'json',
-                        contentType: false,
-                        beforeSend: function() {
-                            $(form).find('span.error-text').text('');
-                        },
-                        success: function(data){
-                            if (data.code == 0){
-                                $.each(data.error, function(prefix, val){
-                                    $(form).find('span.'+prefix+'_error').text(val[0]);
-                                });
-                            } else {
-                                $(form)[0].reset();
-                                // toastr.success(data.msg);
-                                alert(data.msg);
-                            }
-                        }
-                    });
-                });
-            });
-        </script>
 
         <!-- Javascript end-->
 

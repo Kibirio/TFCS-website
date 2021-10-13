@@ -13,7 +13,6 @@ class ContactController extends Controller
             'name' => 'required',
             'phone' => 'required',
             'email' => 'email',
-            'subject' => 'required',
             'message' => 'required',
         ]);
         if (!$validator->passes()){
@@ -23,7 +22,6 @@ class ContactController extends Controller
             $contact = new Contact();
             $contact->name = $request->name;
             $contact->phone = $request->phone;
-            $contact->subject = $request->subject;
             $contact->email = $request->email;
             $contact->message = $request->message;
 
