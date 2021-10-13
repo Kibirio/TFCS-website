@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\LogoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,7 @@ Route::get('/events', [EventController::class, 'index'])->name('events');
 Route::get('/dashboard', function () { return view('dashboard.master'); })->middleware(['auth'])->name('dashboard');
 Route::get('event',[EventController::class, 'create']);
 Route::post('event',[EventController::class, 'store']);
+Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
 require __DIR__.'/auth.php';
 
