@@ -2,7 +2,7 @@
 
 @section('content')
      <!-- page-title -->
-     <div class="ttm-page-title-row mt-100">
+     <div class="ttm-page-title-row">
       <div class="container">
           <div class="row">
               <div class="col-md-12"> 
@@ -12,7 +12,7 @@
                       </div><!-- /.page-title-captions -->
                       <div class="breadcrumb-wrapper">
                           <span>
-                              <a title="Homepage" href="index.html"><i class="ti ti-home"></i>&nbsp;&nbsp;Home</a>
+                              <a title="Homepage" href="{{ route('home') }}"><i class="ti ti-home"></i>&nbsp;&nbsp;Home</a>
                           </span>
                           <span class="ttm-bread-sep ttm-textcolor-white">&nbsp;   →  &nbsp;</span>
                           <span class="ttm-textcolor-skincolor">Contact</span>
@@ -147,46 +147,35 @@
                   </div>
                   <div class="col-lg-6">
                       <div class="spacing-6 ttm-bgcolor-grey mt-0 mb-0">
-                          <form id="ttm-quote-form" class="row ttm-quote-form clearfix" method="post" action="#">
+                          <form id="ttm-quote-form" class="row ttm-quote-form clearfix" method="post" action="{{ route('contact') }}">
+                              @csrf
                               <div class="col-sm-6 col-md-6">
                                   <div class="form-group">
                                       <input name="name" type="text" class="form-control with-border bg-white" placeholder="Full Name*" required="required">
+                                      <span class="text-danger error-text subject_error"></span>
                                   </div>
                               </div>
                               <div class="col-sm-6 col-md-6">
                                   <div class="form-group">
                                       <input name="phone" type="text" placeholder="Phone Number*" required="required" class="form-control with-border bg-white">
-                                  </div>
-                              </div>
-                              <div class="col-sm-6 col-md-6">
-                                  <div class="form-group">
-                                      <input name="address" type="text" placeholder="Email Address*" required="required" class="form-control with-border bg-white">
-                                  </div>
-                              </div>
-                              <div class="col-sm-6 col-md-6">
-                                  <div class="form-group">
-                                      <input name="subject" type="text" placeholder="Subject" required="required" class="form-control with-border bg-white">
-                                  </div>
-                              </div>
-                              <div class="col-lg-12">
-                                  <div class="form-group">
-                                      <select class="form-control with-border bg-white">
-                                          <option>Services</option>
-                                          <option>Services 01</option>
-                                          <option>Services 02</option>
-                                          <option>Services 03</option>
-                                      </select>
+                                      <span class="text-danger error-text subject_error"></span>
                                   </div>
                               </div>
                               <div class="col-sm-12 col-md-12">
                                   <div class="form-group">
-                                      <textarea name="Massage" rows="4" placeholder="Write A Massage..." required="required" class="form-control with-border bg-white"></textarea>
+                                      <input name="email" type="text" placeholder="Email Address*" required="required" class="form-control with-border bg-white">
+                                      <span class="text-danger error-text subject_error"></span>
+                                  </div>
+                              </div>
+                              <div class="col-sm-12 col-md-12">
+                                  <div class="form-group">
+                                      <textarea name="message" rows="4" placeholder="Write A Massage..." required="required" class="form-control with-border bg-white"></textarea>
                                   </div>
                               </div>
                               <div class="col-md-12">
                                   <div class="text-left">
                                       <button type="submit" id="submit" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-darkgrey w-100" value="">
-                                          Submit Quote
+                                          Submit Now
                                       </button>
                                   </div>
                               </div>

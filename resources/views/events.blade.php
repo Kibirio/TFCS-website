@@ -2,7 +2,7 @@
 
 @section('content')
      <!-- page-title -->
-     <div class="ttm-page-title-row mt-100">
+     <div class="ttm-page-title-row">
       <div class="container">
           <div class="row">
               <div class="col-md-12"> 

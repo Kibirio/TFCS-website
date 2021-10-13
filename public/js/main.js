@@ -1,8 +1,5 @@
 /** ==========================================================================================
 
-  Project :   Agrotek - Agriculture HTML Template 
-  Version :   Bootstrap 4.1.1
-  Author :    Themetechmount
 
 ========================================================================================== */
 
@@ -421,6 +418,6 @@ jQuery('#totop').on('click', function() {      // When arrow is clicked
 
 
  $(function() {
-    
+   
     });
 })(jQuery);

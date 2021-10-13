@@ -32,6 +32,11 @@
 <!-- flaticon -->
 <link rel="stylesheet" type="text/css" href="{{ asset('css/flaticon.css') }}"/>
 
+<!-- toastr -->
+<link rel="stylesheet" type="text/css" href="{{ asset('css/toastr.min.css') }}"/>
+
+<!-- sweetalert2 -->
+<link rel="stylesheet" type="text/css" href="{{ asset('css/sweetalert2.min.css') }}"/>
 
 <!-- REVOLUTION LAYERS STYLES -->
 
@@ -64,8 +69,6 @@
         <!-- preloader end -->
 
         <!--header start-->
-
-
         <header id="masthead" class="header ttm-header-style-01">
 
             <!-- ttm-header-wrap -->
@@ -163,13 +166,13 @@
                                         <ul class="dropdown">
                                         <li><a href="{{ route('home') }}">Home</a>
                                             </li>
-                                            <li class="active"><a href="#">About Us</a>
+                                            <li class="active"><a href="{{ route('about') }}">About Us</a>
                                             </li>
-                                            <li><a href="#">Services</a>
+                                            <li><a href="{{ route('services') }}">Services</a>
                                             </li>
-                                            <li><a href="#">Events</a>
+                                            <li><a href="{{ route('events') }}">Events</a>
                                             </li>
-                                            <li><a href="#">Contact Us</a>
+                                            <li><a href="{{ route('contact') }}">Contact Us</a>
                                             </li>
                                         </ul>
                                     </nav>
@@ -318,7 +321,10 @@
         <script src="{{ asset('js/slick.js') }}"></script>
         <script src="{{ asset('js/jquery.prettyPhoto.js') }}"></script>
         <script src="{{ asset('js/numinate.min6959.js?ver=4.9.3') }}"></script>
+        <script src="{{ asset('js/sweetalert2.min.js') }}"></script>
+        <script src="{{ asset('js/toastr.min.js') }}"></script>
         <script src="{{ asset('js/main.js') }}"></script>
+        <script src="{{ asset('js/custom.js') }}"></script>
 
         <!-- Revolution Slider -->
         <script src="{{ asset('revolution/js/revolution.tools.min.js') }}"></script>
