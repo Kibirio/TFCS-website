@@ -170,15 +170,17 @@
                                     </div>
                                     <nav id="menu" class="menu">
                                         <ul class="dropdown">
-                                        <li><a href="{{ route('home') }}">Home</a>
+                                            <li class="{{ request()->is('/') ? 'active' : '' }}"><a href="{{ route('home') }}">Home</a>
                                             </li>
-                                            <li class="active"><a href="{{ route('about') }}">About Us</a>
+                                            <li class="{{ request()->is('/about') ? 'active' : '' }}"><a href="{{ route('about') }}">About Us</a>
                                             </li>
-                                            <li><a href="{{ route('services') }}">Services</a>
+                                            <li class="{{ request()->is('/services') ? 'active' : '' }}"><a href="{{ route('services') }}">Services</a>
                                             </li>
-                                            <li><a href="{{ route('events') }}">Events</a>
+                                            <li class="{{ request()->is('/events') ? 'active' : '' }}"><a href="{{ route('events') }}">Events</a>
                                             </li>
-                                            <li><a href="{{ route('contact') }}">Contact Us</a>
+                                            <li class="{{ request()->is('/contact-us') ? 'active' : '' }}"><a href="{{ route('contact') }}">Contact Us</a>
+                                            </li>
+                                            <li class=""><a href="{{ route('admin_events') }}">Admin</a>
                                             </li>
                                         </ul>
                                     </nav>
@@ -1241,11 +1243,11 @@
                             <div class="widget link-widget clearfix">
                                <h3 class="widget-title">Useful Links</h3>
                                 <ul id="menu-footer-services">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Our Services</a></li>
-                                    <li><a href="#">Coming Events</a></li>
-                                    <li><a href="#">Veterinary Services</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="/about">About Us</a></li>
+                                    <li><a href="/services">Our Services</a></li>
+                                    <li><a href="/evevts">Coming Events</a></li>
+                                    <li><a href="/services">Veterinary Services</a></li>
+                                    <li><a href="/contact">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -1292,7 +1294,8 @@
                     <div class="row copyright">
                         <div class="col-md-12">
                             <div class="text-center">
-                                <span>Copyright © 2020&nbsp;<a href="#">Tulaga Farmers Co-operative Society LTD.</a></span>
+                                <span>Copyright © 2021&nbsp;<a href="#">Tulaga Farmers Co-operative Society LTD.</a></span><br>
+                                <span><a href="#" class="text-primary">Designed by iHAST Technologies</a></span>
                             </div>
                         </div>
                     </div>

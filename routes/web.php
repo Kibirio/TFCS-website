@@ -19,17 +19,21 @@ use App\Http\Controllers\LogoutController;
 |
 */
 
-
-
 Route::get('/', [HomeController::class, 'index'])->name('home');
-
 Route::get('/about-us', [AboutController::class, 'index'])->name('about');
-
 Route::get('/services', [PagesController::class, 'services'])->name('services');
 Route::post('/contact-us', [ContactController::class, 'store'])->name('contact');
 Route::get('/contact-us', [PagesController::class, 'contact'])->name('contact');
-Route::get('/events', [EventController::class, 'index'])->name('events');
-Route::get('/dashboard', function () { return view('dashboard.master'); })->middleware(['auth'])->name('dashboard');
+Route::get('/events', [PagesController::class, 'events'])->name('events');
+
+Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function(){
+  Route::get('/', [EventController::class, 'index'])->name('admin_events');
+  Route::get('/createEvent', function () { return view('dashboard.createEvent'); })->name('createEvent');
+  Route::get('/editEvent/{event}', [EventController::class, 'edit'])->name('editEvent');
+  Route::put('/editEvent/save/{event}', [EventController::class, 'update'])->name('updateEvent');
+  Route::delete('/events/{event}', [EventController::class, 'destroy'])->name('deleteEvent');
+});
+
 Route::get('event',[EventController::class, 'create']);
 Route::post('event',[EventController::class, 'store']);
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');

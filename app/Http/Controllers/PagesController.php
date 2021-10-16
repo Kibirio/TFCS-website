@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Event;
 
 class PagesController extends Controller
 {
@@ -13,6 +14,7 @@ class PagesController extends Controller
         return view('contact');
     }
     public function events(){
-        return view('events');
+        $events = Event::latest()->paginate(4);
+        return view('events', compact('events'));
     }
 }
